@@ -10,21 +10,16 @@ body {
 }
 
 .logo-container {
-    width: 130px;
-    height: 130px;
+    width: 128px;
+    height: 128px;
     float: right;
-    text-align: center;
+    position: relative;
+    top: 20px;
     border: {
         width: 1px;
         style: solid;
         color: $white;
         radius: 10px;
-    }
-    img {
-        width: 80px;
-        height: 80px;
-        position: relative;
-        top: 20px;
     }
 }
 
@@ -33,6 +28,9 @@ body {
     padding: 30px 50px;
     text-align: center;
     color: $white;
+    position: relative;
+    top: 20px;
+    border-radius: 10px;
 }
 
 .form-container {
@@ -55,18 +53,23 @@ body {
             top: 5px;
         }
     }
+    .fa-keyboard-o {
+        color: $white;
+    }
 }
 
 form {
     position: relative;
     top: -30px;
-    img {
-        width: 50px;
-        height: 25px;
-    }
     input[type="password"] {
-        width: 86%;
+        width: 94%;
         display: inline-block;
+    }
+    div.hidden {
+        display: none;
+        span {
+            margin-right: 10px;
+        }
     }
     div {
         text-transform: uppercase;

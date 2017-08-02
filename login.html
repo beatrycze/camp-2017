@@ -1,62 +1,64 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
-    <div class="row">
-        <div class="small-12 large-3 columns a">
-            <div class="logo-container">
-                <a href="#"><img src="img/ef_log.png" alt="efi3 - logo"/></a>
-            </div>
-        </div>
-        <div class="small-12 large-6 columns end">
-            <div class="signin-container">
-                <div>
-                    <h1>Login</h1>
-                    <p>Aby zaimportować dane, zaloguj się do swojego banku</p>
-                </div>
-                <div class="form-container">
-                    <div>
-                        <img src="img/avatar_ghost.png" alt="user photo"/>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foundation for Sites</title>
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <main class="container">
+            <div class="row">
+                <div class="small-12 large-3 columns a">
+                    <div class="logo-container">
+                        <a href="#"><img src="img/ef_log.png" alt="efi3 - logo"/></a>
                     </div>
-                    <form>
-                        <div class="hidden">
-                            <span>123456789</span><i class="fa fa-times-circle" aria-hidden="true"></i>
-                        </div>
-                        <label for="userLogin"></label>
-                        <input type="text" id="userLogin" placeholder="login" />
-                        <label for="userPassword"></label>
-                        <input type="password" id="userPassword" placeholder="password" />
-                        <a href="#"><i class="fa fa-keyboard-o" aria-hidden="true"></i></a>
+                </div>
+                <div class="small-12 large-6 columns end">
+                    <div class="signin-container">
                         <div>
-                            <a href="#">Select other</a>
-                            <a href="" class="button">Go</a>
+                            <h1>Login</h1>
+                            <p>Aby zaimportować dane, zaloguj się do swojego banku</p>
                         </div>
-                    </form>
+                        <div class="form-container">
+                            <div>
+                                <img src="img/avatar_ghost.png" alt="user photo"/>
+                            </div>
+                            <form>
+                                <div class="hidden">
+                                    <span>123456789</span><i class="fa fa-times-circle" aria-hidden="true"></i>
+                                </div>
+                                <label for="userLogin"></label>
+                                <input type="text" id="userLogin" placeholder="login" />
+                                <label for="userPassword"></label>
+                                <input type="password" id="userPassword" placeholder="password" />
+                                <a href="#"><i class="fa fa-keyboard-o" aria-hidden="true"></i></a>
+                                <div>
+                                    <a href="#">Select other</a>
+                                    <a href="" class="button">Go</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Logging in</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Logging in</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/what-input/dist/what-input.js"></script>
-    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/login.js"></script>
-  </body>
+            <script src="bower_components/jquery/dist/jquery.js"></script>
+            <script src="bower_components/what-input/dist/what-input.js"></script>
+            <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+            <script src="js/app.js"></script>
+            <script src="js/login.js"></script>
+        </main>
+    </body>
 </html>

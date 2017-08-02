@@ -1,7 +1,8 @@
 $blue: #13bdd2;
 $white: #ffffff;
 
-body {
+.container {
+    height: 100vh;
     background: {
         image: url('../img/bg.jpeg');
         size: cover;

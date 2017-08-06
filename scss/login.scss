@@ -62,18 +62,20 @@ $white: #ffffff;
 form {
     position: relative;
     top: -30px;
+    p {
+        margin: 0;
+        color: #ef0808;
+        text-align: left;
+    }
     input[type="password"] {
         width: 94%;
         display: inline-block;
     }
-    div.hidden {
-        display: none;
+    div {
+        text-transform: uppercase;
         span {
             margin-right: 10px;
         }
-    }
-    div {
-        text-transform: uppercase;
         a {
             color: $white;
             &.button {
@@ -86,6 +88,14 @@ form {
             }
         }
     }
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    border-color: #ef0808;
 }
 
 ul {

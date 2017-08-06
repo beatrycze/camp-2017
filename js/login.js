@@ -8,27 +8,39 @@
 
     // console.log(login, password, button);
 
+    const acceptLogin = () => {
+        login.classList.remove('error');
+        errorLogin.classList.add('hidden');
+    }
+
+    const displayLoginError = () => {
+        login.classList.add('error');
+        errorLogin.classList.remove('hidden');
+    }
+
+    const acceptPassword = () => {
+        password.classList.remove('error');
+        errorPassword.classList.add('hidden');
+    }
+
+    const displayPasswordError = () => {
+        password.classList.add('error');
+        errorPassword.classList.remove('hidden');
+    }
+
     button.addEventListener('click', event => {
         if (!login.value && password.value) { // login empty
-            password.classList.remove('error');
-            errorPassword.classList.add('hidden');
-            login.classList.add('error');
-            errorLogin.classList.remove('hidden');
+            acceptPassword();
+            displayLoginError();
         } else if (login.value && !password.value) { // password empty
-            login.classList.remove('error');
-            errorLogin.classList.add('hidden');
-            password.classList.add('error');
-            errorPassword.classList.remove('hidden');
+            acceptLogin();
+            displayPasswordError();
         } else if (!login.value && !password.value) { // login & password empty
-            login.classList.add('error');
-            password.classList.add('error');
-            errorLogin.classList.remove('hidden');
-            errorPassword.classList.remove('hidden');
+            displayLoginError();
+            displayPasswordError();
         } else { // login & password not empty
-            login.classList.remove('error');
-            errorLogin.classList.add('hidden');
-            password.classList.remove('error');
-            errorPassword.classList.add('hidden');
+            acceptLogin();
+            acceptPassword();
             window.setTimeout(function() {
                 window.location = "./index.html";
             }, 500);

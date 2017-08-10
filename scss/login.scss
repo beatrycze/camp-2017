@@ -1,19 +1,16 @@
-$blue: #13bdd2;
-$white: #ffffff;
-$red: #ef0808;
+@import 'colors';
 
 .container {
     // height: 100vh;
     background: {
-        image: url('../img/bg.jpeg');
+        image: url('../img/background-image.jpeg');
         size: cover;
         position: center center;
     }
 }
 
-.logo-container {
+.efigence-logo {
     width: 128px;
-    height: 128px;
     float: right;
     position: relative;
     top: 20px;

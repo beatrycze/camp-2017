@@ -1,8 +1,9 @@
 $blue: #13bdd2;
 $white: #ffffff;
+$red: #ef0808;
 
 .container {
-    height: 100vh;
+    // height: 100vh;
     background: {
         image: url('../img/bg.jpeg');
         size: cover;
@@ -37,8 +38,12 @@ $white: #ffffff;
 .form-container {
     padding: 0px 30px 10px 30px;
     margin-top: 100px;
-    border: 1px solid $white;
-    border-radius: 10px;
+    border: {
+        width: 1px;
+        style: solid;
+        color: $white;
+        radius: 10px;
+    }
     > div {
         position: relative;
         top: -70px;
@@ -64,14 +69,36 @@ form {
     top: -30px;
     p {
         margin: 0;
-        color: #ef0808;
+        color: $red;
         text-align: left;
     }
     input[type="password"] {
         width: 94%;
         display: inline-block;
     }
-    div {
+    .validation-message {
+        position: absolute;
+        top: 40px;
+        left: 30%;
+        width: 50%;
+        background-color: #ef0808;
+        border-radius: 5px;
+        padding: 7px;
+        color: $white;
+        font-size: 12px;
+    }
+    .validation-message:before {
+        content: '';
+        position: absolute;
+        bottom: 30px;
+        left: 50px;
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #ef0808 transparent;
+    }
+    .action {
         text-transform: uppercase;
         span {
             margin-right: 10px;
@@ -95,7 +122,7 @@ form {
 }
 
 .error {
-    border-color: #ef0808;
+    border-color: $red;
 }
 
 ul {

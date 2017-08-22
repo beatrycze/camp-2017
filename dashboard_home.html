@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <div class="nav-container">
+            <div class="profile">
+                <div class="logo">
+                    <h1>
+                        <a href="#"><img src="img/efi3-logo.png" alt="Logo Efi3"/></a>
+                    </h1>
+                </div>
+                <div class="user-photo">
+                    <img src="img/avatar-ghost.png" alt="User photo or avatar"/>
+                </div>
+                <div class="personal-details">
+                    <span>Jan Kowalski</span>
+                    <div>
+                        <span class="right-spacer"><a href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></span>
+                        <span><a href="#"><i class="fa fa-cog fa-lg" aria-hidden="true"></i></a></span>
+                    </div>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-home fa-2x nav-icon" aria-hidden="true"></i>
+                        <p>home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-area-chart fa-2x nav-icon" aria-hidden="true"></i>
+                        <p>analyse</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-calendar-o fa-2x nav-icon" aria-hidden="true"></i>
+                        <p>plan</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-calculator fa-2x nav-icon" aria-hidden="true"></i>
+                        <p>earn</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="actions">
+                <p class="item search">
+                    <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                </p>
+                <div class="line">
+                    <svg width="5" height="80" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="0" x2="0" y2="80" stroke-width="2" stroke="white" />
+                    </svg>
+                </div>
+                <p class="item logout">
+                    <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
+                </p>
+            </div>
+        </div>
+
+        <main>
+            <div class="analysis-container">
+                <div class="life-stream">
+                    <h2>Finance life stream</h2>
+                    <div class="box-1 right-spacer">
+                        <h3>Balance</h3>
+                        <p><span class="sum">7 200,34</span> PLN</p>
+                    </div>
+                    <div class="box-2">
+                        <h3>Available funds</h3>
+                        <p><span class="sum">7 200,34</span> PLN</p>
+                    </div>
+                </div>
+
+                <div class="payments">
+                    <div>
+                        <h3>Scheduled payments</h3>
+                        <span><span class="sum">2 200,34</span> PLN</span>
+                        <a href="#" class="button">fast pay</a>
+                    </div>
+                </div>
+
+                <div class="options">
+                    <div>
+                        <span>Add</span>
+                        <a href="#" class="button">bank</a>
+                        <a href="#" class="button">payment</a>
+                    </div>
+                    <div>
+                        <span>Account analysis</span>
+                        <div class="on-off">
+                            <a href="#" class="button off">off</a>
+                            <a href="#" class="button on">on</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div>
+                    <div>[ Place for chart ]</div>
+                </div>
+            </div>
+
+            <div class="account-container">
+                <div>
+                    <h4>Products</h4>
+                    <div>
+                        [ Place for products ]
+                    </div>
+                </div>
+
+                <div class="history">
+                    <div>
+                        [ Place for history ]
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/what-input/dist/what-input.js"></script>
+        <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/dashboard.js"></script>
+    </body>
+</html>

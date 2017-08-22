@@ -1,0 +1,133 @@
+@import 'colors';
+
+main {
+    background: $grey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h1 {
+    margin: 0px;
+    a {
+        display: inline-block;
+    }
+}
+
+h3 {
+    font-size: 17px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $blue;
+    padding: 20px 0px;
+    color: $white;
+    p {
+        text-transform: uppercase;
+        position: relative;
+        top: 20px;
+    }
+    a {
+        color: $white;
+        &:hover, &:focus {
+            border: 0px; // TODO
+        }
+    }
+    .profile {
+        display: inline-flex;
+        .logo, .user-photo {
+            width: 100px;
+        }
+        .personal-details {
+            margin-left: 20px;
+            margin-top: 15px;
+            div {
+                margin-top: 30px;
+            }
+        }
+    }
+    ul {
+        text-align: center;
+        li {
+            padding-right: 30px;
+        }
+    }
+    .actions {
+        display: inline-flex;
+        .line {
+            padding: 0px 10px;
+        }
+        p.logout {
+            color: #e21a61;
+        }
+    }
+}
+
+.analysis-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    .button {
+        background-color: $blue;
+        text-transform: uppercase;
+    }
+    .life-stream {
+        .box-1, .box-2 {
+            display: inline-block;
+            p {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .payments {
+        .button {
+            margin: 0px;
+        }
+    } 
+    .options {
+        .on-off {
+            background-color: $white;
+            display: inline-block;
+            padding: 2px;
+            height: 45px;
+            .off {
+                background-color: $grey;
+                color: #000000;
+            }
+            .on {
+                background-color: $white;
+                color: #000000;
+            }
+        }
+    }
+    .sum {
+        font-weight: bold;
+    }
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.account-container {
+    display: flex;    
+    justify-content: space-around;
+    padding-top: 50px;
+    .products {
+        display: inline-flex;
+    }
+    .history {
+        display: inline-flex
+    }
+    p {
+        margin-bottom: 0px;
+    }
+}
+
+.right-spacer {
+    margin-right: 15px;
+}

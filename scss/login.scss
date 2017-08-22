@@ -9,16 +9,13 @@
     }
 }
 
-.efigence-logo {
+.efi3-logo {
     width: 128px;
     float: right;
     position: relative;
-    top: 20px;
-    border: {
-        width: 1px;
-        style: solid;
-        color: $white;
-        radius: 10px;
+    top: -40px;
+    a {
+        display: inline-block;
     }
 }
 
@@ -70,7 +67,7 @@ form {
         text-align: left;
     }
     input[type="password"] {
-        width: 94%;
+        width: 92%;
         display: inline-block;
     }
     .validation-message {
@@ -134,4 +131,26 @@ ul {
             color: $white;
         }
     }
+}
+
+.skiplinks {
+    list-style: none;
+    a {
+        display: inline-block;
+        padding: 16px;
+        position: absolute;
+        left: 0;
+        top: -1000px;
+        width: 230px;
+        z-index: 100;
+        &:focus {
+            top: 0;
+            color: $white;
+        }
+    }
+}
+
+a:focus {
+    outline: 0;
+    border: 2px solid #be0808;
 }

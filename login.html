@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Foundation for Sites</title>
+        <title>Login page</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="css/app.css">
     </head>
@@ -12,8 +12,13 @@
         <main class="container">
             <div class="row">
                 <div class="small-12 large-3 columns">
-                    <h1 class="efigence-logo">
-                        <a href="#"><img src="img/efigence-logo.png" alt="efi3 - logo"/></a>
+                    <ul class="skiplinks">
+                        <li><a href="#security">Go to security section</a></li>
+                        <li><a href="#loginin">Go to login page</a></li>
+                        <li><a href="#contact">Go to contact section</a></li>
+                    </ul>
+                    <h1 class="efi3-logo">
+                        <a href="#"><img src="img/efi3-logo.png" alt="Logo Efi3"/></a>
                     </h1>
                 </div>
                 <div class="small-12 large-6 columns">
@@ -24,7 +29,7 @@
                         </div>
                         <div class="form-container">
                             <div>
-                                <img src="img/avatar-ghost.png" alt="user photo"/>
+                                <img src="img/avatar-ghost.png" alt="User photo or avatar"/>
                             </div>
                             <form>
                                 <div class="hidden">
@@ -32,15 +37,15 @@
                                 </div>
                                 <p class="hidden login">Wpisz swój login</p>
                                 <p class="hidden password">Wpisz swoje hasło</p>
-                                <label for="userLogin"></label>
+                                <label for="userLogin"><span class="show-for-sr">User login</span></label>
                                 <input type="text" id="userLogin" placeholder="login" />
                                 <div class="validation-message hidden"></div>
-                                <label for="userPassword"></label>
+                                <label for="userPassword"><span class="show-for-sr">User password</span></label>
                                 <input type="password" id="userPassword" placeholder="password" />
                                 <a href="#"><i class="fa fa-keyboard-o" aria-hidden="true"></i></a>
                                 <div class="action">
-                                    <a href="#">Select other</a>
-                                    <a href="" class="button">Go</a>
+                                    <a href="#">Select other <span class="show-for-sr">user login</span></a>
+                                    <a href="#" class="button">Go <span class="show-for-sr">to your account</span></a>
                                 </div>
                             </form>
                         </div>
@@ -56,12 +61,11 @@
                     </div>
                 </div>
             </div>
-
-            <script src="bower_components/jquery/dist/jquery.js"></script>
-            <script src="bower_components/what-input/dist/what-input.js"></script>
-            <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-            <script src="js/app.js"></script>
-            <script src="js/login.js"></script>
         </main>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/what-input/dist/what-input.js"></script>
+        <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/login.js"></script>        
     </body>
 </html>

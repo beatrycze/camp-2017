@@ -114,15 +114,53 @@ h3 {
 }
 
 .account-container {
-    display: flex;    
+    display: flex;
     justify-content: space-around;
     padding-top: 50px;
     .products {
-        display: inline-flex;
+        display: flex;
+        .product-box {
+            display: flex;
+            width: 280px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            background-color: $white;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 10px 10px 10px 0px;
+            .fa {
+                color: $grey; 
+            }
+        }
+        .bank-loan {
+            flex-grow: 0;
+            background-color: $blue;
+            .fa-hand-o-right {
+                color: $white;
+            }
+        }
     }
-    .history {
-        display: inline-flex
+    .history-box {
+        background-color: $white;
+        border-radius: 4px;
+        margin-top: 15px;
+        .history {
+            display: flex;
+            .history-row {
+                display: inline-flex;
+                width: 500px;
+                border-bottom: 1px solid $grey;
+                padding: 10px;
+                margin: 10px 0px 0px 0px;
+                .description {
+                    display: flex;
+                    flex-grow: 2;
+                    margin: 0px 20px 0px 20px;
+                }
+            }
+        }
     }
+
     p {
         margin-bottom: 0px;
     }

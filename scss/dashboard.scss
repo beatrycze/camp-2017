@@ -135,7 +135,9 @@ main {
 .chart-container {
     display: flex;
     justify-content: space-around;
-    padding: 80px 0px;
+    background-color: $white;
+    border-radius: 4px;
+    margin: 50px 70px;
 }
 
 .account-container {
@@ -157,6 +159,9 @@ main {
             margin: 10px 10px 10px 0px;
             .fa {
                 color: $grey; 
+            }
+            p, span {
+                font-size: 18px;
             }
         }
         .bank-loan {
@@ -182,8 +187,8 @@ main {
                 flex-grow: 2;
                 margin: 0px 20px 0px 20px;
             }
-            .amount {
-                font-size: 15px;
+            .date, .description, .amount {
+                font-size: 18px;
             }
         }
     }

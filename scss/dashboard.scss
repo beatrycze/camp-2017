@@ -1,29 +1,19 @@
 @import 'colors';
 
-main {
-    background: $grey;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-h1 {
-    margin: 0px;
-    a {
-        display: inline-block;
-    }
-}
-
-h3 {
-    font-size: 17px;
-}
-
 .nav-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: $blue;
     padding: 20px 0px;
+    font-family: 'Roboto Condensed', sans-serif;
     color: $white;
+    h1 {
+        margin: 0px;
+        a {
+            display: inline-block;
+        }
+    }
     p {
         text-transform: uppercase;
         position: relative;
@@ -31,18 +21,19 @@ h3 {
     }
     a {
         color: $white;
-        &:hover, &:focus {
-            border: 0px; // TODO
-        }
     }
     .profile {
         display: inline-flex;
         .logo, .user-photo {
-            width: 100px;
+            width: 157px;
         }
         .personal-details {
             margin-left: 20px;
-            margin-top: 15px;
+            margin-top: 10px;
+            span.user-name {
+                font-size: 40px;
+                letter-spacing: -1.3px;
+            }
             div {
                 margin-top: 30px;
             }
@@ -50,8 +41,19 @@ h3 {
     }
     ul {
         text-align: center;
+        margin: 0px;
         li {
-            padding-right: 30px;
+            display: inline-flex;
+            padding: 0px 30px 0px 0px;
+            a {
+                &:hover, &:focus {
+                    background-color: #000000;
+                    border: 0px;
+                }
+            }
+            p {
+                font-size: 15px;
+            }
         }
     }
     .actions {
@@ -65,28 +67,54 @@ h3 {
     }
 }
 
+main {
+    background: $grey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    h2 {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 60px;
+    }
+
+    h3 {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 40px;
+    }
+    h4 {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 20px;
+    }
+}
+
 .analysis-container {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+    font-family: 'Roboto Condensed', sans-serif;
     .button {
         background-color: $blue;
         text-transform: uppercase;
     }
+    .currency {
+        margin-bottom: 0px;
+        font-size: 30px;
+    }
     .life-stream {
         .box-1, .box-2 {
             display: inline-block;
-            p {
-                margin-bottom: 0px;
-            }
         }
     }
     .payments {
         .button {
             margin: 0px;
+            vertical-align: top;
         }
     } 
     .options {
+        span {
+            font-size: 20px;
+        }
         .on-off {
             background-color: $white;
             display: inline-block;
@@ -102,22 +130,21 @@ h3 {
             }
         }
     }
-    .sum {
-        font-weight: bold;
-    }
 }
 
 .chart-container {
     display: flex;
     justify-content: space-around;
-    padding-top: 50px;
+    padding: 80px 0px;
 }
 
 .account-container {
     display: flex;
-    justify-content: space-around;
-    padding-top: 50px;
-    .products {
+    justify-content: center;
+    .account-box {
+        flex-basis: 45%;
+    }
+    .products-row {
         display: flex;
         .product-box {
             display: flex;
@@ -140,27 +167,26 @@ h3 {
             }
         }
     }
-    .history-box {
+    .history-wrapper {
         background-color: $white;
         border-radius: 4px;
         margin-top: 15px;
-        .history {
-            display: flex;
-            .history-row {
-                display: inline-flex;
-                width: 500px;
-                border-bottom: 1px solid $grey;
-                padding: 10px;
-                margin: 10px 0px 0px 0px;
-                .description {
-                    display: flex;
-                    flex-grow: 2;
-                    margin: 0px 20px 0px 20px;
-                }
+        .history-row {
+            display: inline-flex;
+            width: 100%;
+            border-bottom: 1px solid $grey;
+            padding: 10px;
+            margin: 10px 0px 0px 0px;
+            .description {
+                display: flex;
+                flex-grow: 2;
+                margin: 0px 20px 0px 20px;
+            }
+            .amount {
+                font-size: 15px;
             }
         }
     }
-
     p {
         margin-bottom: 0px;
     }
@@ -168,4 +194,8 @@ h3 {
 
 .right-spacer {
     margin-right: 15px;
+}
+
+.sum {
+    font-weight: bold;
 }

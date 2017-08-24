@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
@@ -20,10 +22,10 @@
                     <img src="img/avatar-ghost.png" alt="User photo or avatar"/>
                 </div>
                 <div class="personal-details">
-                    <span>Jan Kowalski</span>
+                    <span class="user-name">Jan Kowalski</span>
                     <div>
-                        <span class="right-spacer"><a href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></span>
-                        <span><a href="#"><i class="fa fa-cog fa-lg" aria-hidden="true"></i></a></span>
+                        <span class="right-spacer"><a href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></span>
+                        <span><a href="#"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a></span>
                     </div>
                 </div>
             </div>
@@ -31,25 +33,25 @@
             <ul>
                 <li>
                     <a href="#">
-                        <i class="fa fa-home fa-2x nav-icon" aria-hidden="true"></i>
+                        <i class="fa fa-home fa-4x nav-icon" aria-hidden="true"></i>
                         <p>home</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-area-chart fa-2x nav-icon" aria-hidden="true"></i>
+                        <i class="fa fa-area-chart fa-3x nav-icon" aria-hidden="true"></i>
                         <p>analyse</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-calendar-o fa-2x nav-icon" aria-hidden="true"></i>
+                        <i class="fa fa-calendar-o fa-3x nav-icon" aria-hidden="true"></i>
                         <p>plan</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-calculator fa-2x nav-icon" aria-hidden="true"></i>
+                        <i class="fa fa-calculator fa-3x nav-icon" aria-hidden="true"></i>
                         <p>earn</p>
                     </a>
                 </li>
@@ -76,18 +78,18 @@
                     <h2>Finance life stream</h2>
                     <div class="box-1 right-spacer">
                         <h3>Balance</h3>
-                        <p><span class="sum">7 200,34</span> PLN</p>
+                        <p class="currency"><span class="sum">7 200,34</span> PLN</p>
                     </div>
                     <div class="box-2">
                         <h3>Available funds</h3>
-                        <p><span class="sum">7 200,34</span> PLN</p>
+                        <p class="currency"><span class="sum">7 200,34</span> PLN</p>
                     </div>
                 </div>
 
                 <div class="payments">
                     <div>
                         <h3>Scheduled payments</h3>
-                        <span><span class="sum">2 200,34</span> PLN</span>
+                        <span class="currency"><span class="sum">2 200,34</span> PLN</span>
                         <a href="#" class="button">fast pay</a>
                     </div>
                 </div>
@@ -115,9 +117,9 @@
             </div>
 
             <div class="account-container">
-                <div>
+                <div class="account-box">
                     <h4>Products</h4>
-                    <section class="products">
+                    <section class="products-row">
                         <div class="product-box">
                             <div class="right-spacer">
                                 <i class="fa fa-credit-card fa-3x" aria-hidden="true"></i>
@@ -138,7 +140,7 @@
                         </div>
                     </section>
 
-                    <section class="products">
+                    <section class="products-row">
                         <div class="product-box">
                             <div class="right-spacer">
                                 <i class="fa fa-tasks fa-3x" aria-hidden="true"></i>
@@ -159,7 +161,7 @@
                         </div>
                     </section>
 
-                    <section class="products">
+                    <section class="products-row">
                         <div class="product-box bank-loan">
                             <div class="right-spacer">
                                 <i class="fa fa-hand-o-right fa-3x" aria-hidden="true"></i>
@@ -172,10 +174,10 @@
                     </section>
                 </div>
 
-                <div>
+                <div class="account-box">
                     <h4>History</h4>
-                    <div class="history-box">
-                        <section class="history">
+                    <div class="history-wrapper">
+                        <section>
                             <div class="history-row">
                                 <div class="date">
                                     [ date ]
@@ -184,7 +186,7 @@
                                     [ description ]
                                 </div>
                                 <div class="amount">
-                                    [ amount ]
+                                    <span class="sum">[ amount ]</span> <span>PLN</span>
                                 </div>
                             </div>
                         </section>
@@ -198,7 +200,7 @@
                                     [ description ]
                                 </div>
                                 <div class="amount">
-                                    [ amount ]
+                                    <span class="sum">[ amount ]</span> <span>PLN</span>
                                 </div>
                             </div>
                         </section>
@@ -212,7 +214,7 @@
                                     [ description ]
                                 </div>
                                 <div class="amount">
-                                    [ amount ]
+                                    <span class="sum">[ amount ]</span> <span>PLN</span>
                                 </div>
                             </div>
                         </section>
@@ -226,7 +228,21 @@
                                     [ description ]
                                 </div>
                                 <div class="amount">
-                                    [ amount ]
+                                    <span class="sum">[ amount ]</span> <span>PLN</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="history">
+                            <div class="history-row">
+                                <div class="date">
+                                    [ date ]
+                                </div>
+                                <div class="description">
+                                    [ description ]
+                                </div>
+                                <div class="amount">
+                                    <span class="sum">[ amount ]</span> <span>PLN</span>
                                 </div>
                             </div>
                         </section>

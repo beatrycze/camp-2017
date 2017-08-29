@@ -5,7 +5,7 @@
     justify-content: space-around;
     align-items: center;
     background: $blue;
-    padding: 20px 0px;
+    // padding: 20px 0px;
     font-family: 'Roboto Condensed', sans-serif;
     color: $white;
     h1 {
@@ -34,22 +34,45 @@
                 letter-spacing: -1.3px;
             }
             div {
-                margin-top: 38px;
+                margin-top: 30px;
             }
         }
     }
     ul {
         text-align: center;
         margin: 0px;
-        li {
-            display: inline-flex;
-            padding: 0px 30px 0px 0px;
-            a {
-                &:hover, &:focus {
-                    background-color: $black;
-                    border: 0px;
+        .menu-element {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            height: 150px;
+            &:hover, &:focus {
+                background-color: $black;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 140px;
+                    left: 35px;
+                    width: 18px;
+                    height: 20px;
+                    background-color: #000000;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-radius: 50px;
+                    border-color: #000000;
                 }
             }
+
+        }
+        li {
+            display: inline-flex;
+            padding: 30px 0px;
+            // a {
+            //     &:hover, &:focus {
+            //         background-color: $black;
+            //         border: 0px;
+            //     }
+            // }
             p {
                 font-size: 15px;
             }

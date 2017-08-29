@@ -25,17 +25,16 @@
     .profile {
         display: inline-flex;
         .logo, .user-photo {
-            width: 157px;
+            width: 110px;
         }
         .personal-details {
             margin-left: 20px;
-            margin-top: 10px;
             span.user-name {
-                font-size: 40px;
+                font-size: 25px;
                 letter-spacing: -1.3px;
             }
             div {
-                margin-top: 30px;
+                margin-top: 38px;
             }
         }
     }
@@ -47,7 +46,7 @@
             padding: 0px 30px 0px 0px;
             a {
                 &:hover, &:focus {
-                    background-color: #000000;
+                    background-color: $black;
                     border: 0px;
                 }
             }
@@ -69,21 +68,21 @@
 
 main {
     background: $grey;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 15px 0px;
     font-family: 'Roboto Condensed', sans-serif;
     h2 {
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: 60px;
+        font-size: 40px;
     }
 
     h3 {
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: 40px;
+        font-size: 25px;
     }
     h4 {
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: 20px;
+        font-size: 15px;
+        margin: 0px;
     }
 }
 
@@ -95,49 +94,57 @@ main {
     .button {
         background-color: $blue;
         text-transform: uppercase;
+        padding: 0.5em 1em;
+        vertical-align: -webkit-baseline-middle;
+    }
+    .size {
+        width: 90px;
     }
     .currency {
         margin-bottom: 0px;
-        font-size: 30px;
+        font-size: 20px;
     }
     .life-stream {
         .box-1, .box-2 {
             display: inline-block;
         }
+        .box-2 {
+            position: relative;
+            left: 50px;
+        }
     }
     .payments {
-        .button {
-            margin: 0px;
-            vertical-align: top;
-        }
-    } 
+        position: relative;
+        top: 15px;
+        left: -100px
+    }
     .options {
         span {
-            font-size: 20px;
+            font-size: 15px;
         }
         .on-off {
             background-color: $white;
             display: inline-block;
-            padding: 2px;
-            height: 45px;
+            padding: 2px 0px 0px 2px;
+            height: 34px;
             .off {
                 background-color: $grey;
-                color: #000000;
+                color: $black;
             }
             .on {
                 background-color: $white;
-                color: #000000;
+                color: $black;
             }
         }
     }
 }
 
 .chart-container {
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
+    // justify-content: space-around;
     background-color: $white;
     border-radius: 4px;
-    margin: 50px 70px;
+    margin: 20px 70px;
 }
 
 .account-container {
@@ -146,36 +153,65 @@ main {
     .account-box {
         flex-basis: 45%;
     }
-    .products-row {
+    .products {
         display: flex;
-        .product-box {
-            display: flex;
+        flex-flow: wrap;
+        font-size: 15px;
+        .products-list {
+            background-color: $white;
             width: 280px;
             flex-grow: 1;
             flex-shrink: 1;
-            background-color: $white;
             border-radius: 4px;
             padding: 20px;
-            margin: 10px 10px 10px 0px;
-            .fa {
-                color: $grey; 
+            margin: 10px 10px 0px 0px;
+            .icon {
+                color: $grey;
             }
-            p, span {
-                font-size: 18px;
+            .type {
+                display: flex;
+                padding-left: 80px;
+                margin-top: -50px;
+            }
+            .amount {
+                padding-left: 80px;
             }
         }
-        .bank-loan {
-            flex-grow: 0;
+        .bank-loan-style {
+            flex-grow: 0.04; // TODO
             background-color: $blue;
-            .fa-hand-o-right {
-                color: $white;
-            }
         }
     }
-    .history-wrapper {
+    // .products-row {
+    //     display: flex;
+    //     .product-box {
+    //         display: flex;
+    //         width: 280px;
+    //         flex-grow: 1;
+    //         flex-shrink: 1;
+    //         background-color: $white;
+    //         border-radius: 4px;
+    //         padding: 20px;
+    //         margin: 10px 10px 10px 0px;
+    //         .fa {
+    //             color: $grey;
+    //         }
+    //         p, span {
+    //             font-size: 18px;
+    //         }
+    //     }
+    //     .bank-loan {
+    //         flex-grow: 0.2;
+    //         background-color: $blue;
+    //         .fa-hand-o-right {
+    //             color: $white;
+    //         }
+    //     }
+    // }
+    .history {
         background-color: $white;
         border-radius: 4px;
-        margin-top: 15px;
+        margin-top: 10px;
         .history-row {
             display: inline-flex;
             width: 100%;
@@ -188,7 +224,7 @@ main {
                 margin: 0px 20px 0px 20px;
             }
             .date, .description, .amount {
-                font-size: 18px;
+                font-size: 15px;
             }
         }
     }
@@ -203,4 +239,8 @@ main {
 
 .sum {
     font-weight: bold;
+}
+
+.list-element-inline {
+    display: inline-block;
 }

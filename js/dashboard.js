@@ -2,11 +2,11 @@
 
     const getProductsData = (endpoint, containerClassName) => {
 
-        $.get(endpoint, (response) => {
+        $.get(endpoint, response => {
             const productsContainer = document.querySelector(containerClassName);
             const productsList = response.content;
 
-            const productTemplate = (productData) => {
+            const productTemplate = productData => {
                 let icon;
                 let bankLoansStyle;
                 
@@ -44,7 +44,7 @@
                 `
             };
 
-            productsList.forEach((element, index) => {
+            productsList.forEach(element => {
                 const template = productTemplate(element);
                 productsContainer.insertAdjacentHTML("beforeend", template);
                 // $(".products").append(template);
@@ -53,11 +53,11 @@
     }
 
     const getHistoryData = (endpoint, containerClassName) => {
-        $.get(endpoint, (response) => {
+        $.get(endpoint, response => {
             const historyContainer = document.querySelector(containerClassName);
             const historyList = response.content;
 
-            const historyTemplate = (historyData) => {
+            const historyTemplate = historyData => {
                 let dataFormatted = historyData.date.slice(8) + "." + historyData.date.slice(5,7);
                 return `
                     <ul class="history-row">
@@ -68,7 +68,7 @@
                 `
             }
 
-            historyList.forEach((element, index) => {
+            historyList.forEach(element => {
                 const template = historyTemplate(element);
                 historyContainer.insertAdjacentHTML("beforeend", template);
             });
@@ -76,24 +76,31 @@
     }
 
     const summaryData = (endpoint, balanceIdName, fundsIdName, paymentsIdName) => {
-        $.get(endpoint, (response) => {
+        $.get(endpoint, response => {
             const balanceContainer = document.getElementById(balanceIdName);
             const fundsContainer = document.getElementById(fundsIdName);
             const paymentsContainer = document.getElementById(paymentsIdName);
-            const summaryData = response.content[0];
 
-            const balanceTemplate = `<span class="sum">${summaryData.balance}</span>`;
+            // https://stackoverflow.com/a/16233919
+            const formatter = new Intl.NumberFormat('pl-PL', {
+                style: 'currency',
+                currency: 'PLN',
+                minimumFractionDigits: 2
+            });
+
+            // Object destructuring
+            let {balance, funds, payments} = response.content[0];
+            // Array destructuring
+            [balance, funds, payments] = [balance, funds, payments].map(element => formatter.format(element).slice(0, -3));
+
+            const balanceTemplate = `<span class="sum">${balance}</span>`;
             balanceContainer.insertAdjacentHTML("afterbegin", balanceTemplate);
 
-            const fundsTemplate = `<span class="sum">${summaryData.funds}</span>`;
+            const fundsTemplate = `<span class="sum">${funds}</span>`;
             fundsContainer.insertAdjacentHTML("afterbegin", fundsTemplate);
 
-            const paymentsTemplate = `<span class="sum">${summaryData.payments}</span>`;
+            const paymentsTemplate = `<span class="sum">${payments}</span>`;
             paymentsContainer.insertAdjacentHTML("afterbegin", paymentsTemplate);
-
-            // for (var key in summaryData) {
-            //     console.log(`${key}: ${summaryData[key]}`);
-            // }
         })
     }
 

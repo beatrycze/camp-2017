@@ -8,12 +8,12 @@ const rounding = num => {
 }
 
 const getScale = (values, steps) => {
-    const max = Math.max(...values);
-    const maxRounded = rounding(max);
+  const max = Math.max(...values);
+  const maxRounded = rounding(max);
 	const scale = [];
 	const part = maxRounded / (steps - 1);
 	for(let i = 0; i < steps; i++) {
-        scale.push(Math.round(i * part));
+      scale.push(Math.round(i * part));
 	}
 	return scale;
 }

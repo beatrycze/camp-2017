@@ -2,16 +2,13 @@
     const getChartValues = endpoint => {
         return $.get(endpoint).then(response => {
             const chartList = response.content;
-            const chartValuesList = chartList.map((element) => {
-                return element.amount;
-            });
+            const chartValuesList = chartList.map(element => element.amount);
             return chartValuesList;
         });
     }
 
     const valuesPromise = getChartValues("https://efigence-camp.herokuapp.com/api/data/chart");
     valuesPromise.then(values => {
-        var colors = ['red','green','blue','yellow','black','red'];
 
         c3.generate({
             bindto: '#chart',
@@ -28,7 +25,7 @@
                 labels: true
             },
             point: {
-                    show: false
+                show: false
             },
             axis: {
                 x: {

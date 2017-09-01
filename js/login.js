@@ -11,23 +11,23 @@
     // console.log(login, password, button);
 
     // const acceptLogin = () => {
-    //     login.classList.remove('error');
-    //     errorLogin.classList.add('hidden');
+    //     login.classList.remove('login-error');
+    //     errorLogin.classList.add('hide');
     // }
 
     // const displayLoginError = () => {
-    //     login.classList.add('error');
-    //     errorLogin.classList.remove('hidden');
+    //     login.classList.add('login-error');
+    //     errorLogin.classList.remove('hide');
     // }
 
     // const acceptPassword = () => {
-    //     password.classList.remove('error');
-    //     errorPassword.classList.add('hidden');
+    //     password.classList.remove('login-error');
+    //     errorPassword.classList.add('hide');
     // }
 
     // const displayPasswordError = () => {
-    //     password.classList.add('error');
-    //     errorPassword.classList.remove('hidden');
+    //     password.classList.add('login-error');
+    //     errorPassword.classList.remove('hide');
     // }
 
     // button.addEventListener('click', event => {
@@ -62,9 +62,9 @@
             url: "https://efigence-camp.herokuapp.com/api/login",
             error: function(response) {
                 // console.log(response);
-                login.classList.add('error');
-                password.classList.add('error');
-                validationMessage.classList.remove('hidden');
+                login.classList.add('login-error');
+                password.classList.add('login-error');
+                validationMessage.classList.remove('hide');
                 validationMessage.innerHTML=response.responseJSON.message;
             },
             success: function(response) {

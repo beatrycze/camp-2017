@@ -2,10 +2,10 @@
 
 .nav-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 75px;
     align-items: center;
     background: $blue;
-    // padding: 20px 0px;
     font-family: 'Roboto Condensed', sans-serif;
     color: $white;
     h1 {
@@ -24,6 +24,7 @@
     }
     .profile {
         display: inline-flex;
+        padding: 20px 0px;
         .logo, .user-photo {
             width: 110px;
         }
@@ -45,7 +46,7 @@
             display: inline-block;
             position: relative;
             width: 90px;
-            height: 150px;
+            // height: 150px;
             &:hover, &:focus {
                 background-color: $black;
                 &:after {
@@ -111,7 +112,8 @@ main {
 
 .analysis-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 75px;
     align-items: flex-end;
     font-family: 'Roboto Condensed', sans-serif;
     .button {
@@ -238,7 +240,7 @@ main {
     margin-right: 15px;
 }
 
-.sum {
+.bold {
     font-weight: bold;
 }
 

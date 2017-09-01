@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login page</title>
+        <title>Login</title>
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
-        <main class="container">
+        <main class="login-container">
             <div class="row">
                 <div class="small-12 large-3 columns">
                     <ul class="skiplinks">
@@ -31,15 +31,15 @@
                             <div>
                                 <img src="img/avatar-ghost.png" alt="User photo or avatar"/>
                             </div>
-                            <form>
-                                <div class="hidden">
+                            <form class="login-form">
+                                <div class="hide">
                                     <span>123456789</span><i class="fa fa-times-circle" aria-hidden="true"></i>
                                 </div>
-                                <p class="hidden login">Wpisz swój login</p>
-                                <p class="hidden password">Wpisz swoje hasło</p>
+                                <p class="hide login">Wpisz swój login</p>
+                                <p class="hide password">Wpisz swoje hasło</p>
                                 <label for="userLogin"><span class="show-for-sr">User login</span></label>
                                 <input type="text" id="userLogin" placeholder="login" />
-                                <div class="validation-message hidden"></div>
+                                <div class="validation-message hide"></div>
                                 <label for="userPassword"><span class="show-for-sr">User password</span></label>
                                 <input type="password" id="userPassword" placeholder="password" />
                                 <a href="#"><i class="fa fa-keyboard-o" aria-hidden="true"></i></a>

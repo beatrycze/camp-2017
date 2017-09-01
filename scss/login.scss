@@ -1,6 +1,6 @@
 @import 'colors';
 
-.container {
+.login-container {
     height: 100vh;
     background: {
         image: url('../img/background-image.jpeg');
@@ -58,7 +58,7 @@
     }
 }
 
-form {
+.login-form {
     position: relative;
     top: -30px;
     p {
@@ -111,11 +111,7 @@ form {
     }
 }
 
-.hidden {
-    display: none;
-}
-
-.error {
+.login-error {
     border-color: $red;
 }
 

@@ -1,0 +1,84 @@
+@import 'colors';
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 75px;
+    align-items: center;
+    background: $blue;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: $white;
+    h1 {
+        margin: 0px;
+        a {
+            display: inline-block;
+        }
+    }
+    p {
+        text-transform: uppercase;
+        position: relative;
+        top: 20px;
+    }
+    a {
+        color: $white;
+    }
+    .profile {
+        display: inline-flex;
+        padding: 20px 0px;
+        .logo, .user-photo {
+            width: 110px;
+        }
+        .personal-details {
+            margin-left: 20px;
+            span.user-name {
+                font-size: 25px;
+                letter-spacing: -1.3px;
+            }
+            div {
+                margin-top: 30px;
+            }
+        }
+    }
+    .navigation {
+        text-align: center;
+        margin: 0px;
+        .nav-item-container {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            // height: 150px;
+            &:hover, &:focus {
+                background-color: $black;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 140px;
+                    left: 35px;
+                    width: 18px;
+                    height: 20px;
+                    background-color: #000000;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-radius: 50px;
+                    border-color: #000000;
+                }
+            }
+            .nav-item {
+                display: inline-flex;
+                padding: 30px 0px;
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .actions {
+        display: inline-flex;
+        .line {
+            padding: 0px 10px;
+        }
+        p.logout {
+            color: #e21a61;
+        }
+    }
+}

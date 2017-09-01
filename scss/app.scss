@@ -54,6 +54,7 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 //my file
+@import 'navigation';
 @import 'login';
 @import 'dashboard';
 @import 'transfer';

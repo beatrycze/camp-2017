@@ -1,19 +1,21 @@
 (() => {
-    const getChartValues = endpoint => {
+    const getChartParams = endpoint => {
         return $.get(endpoint).then(response => {
-            const chartList = response.content;
-            const chartValuesList = chartList.map(element => element.amount);
-            return chartValuesList;
+            return response.content;
         });
     }
 
-    const valuesPromise = getChartValues("https://efigence-camp.herokuapp.com/api/data/chart");
-    valuesPromise.then(values => {
+    const paramsPromise = getChartParams("https://efigence-camp.herokuapp.com/api/data/chart");
+    paramsPromise.then(params => {
 
+        const dates = params.map(element => element.date);
+        const values = params.map(element => element.amount);
         c3.generate({
             bindto: '#chart',
             data: {
+                x: 'x',
                 columns: [
+                    ['x', ...dates],
                     ['amount', ...values]
                 ],
                 types: {
@@ -29,7 +31,10 @@
             },
             axis: {
                 x: {
-                    show: false
+                    type: 'timeseries',
+                    tick: {
+                        format: '%Y-%m-%d'
+                    }
                 },
                 y: {
                     inner: true,
@@ -45,7 +50,7 @@
                 top: 20,
                 right: 0,
                 bottom: 0,
-                left: 10,
+                left: 20,
             },
         });
     });

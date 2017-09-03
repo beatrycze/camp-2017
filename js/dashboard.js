@@ -93,14 +93,9 @@
             // Array destructuring
             [balance, funds, payments] = [balance, funds, payments].map(element => formatter.format(element).slice(0, -3));
 
-            const balanceTemplate = `<span class="sum">${balance}</span>`;
-            balanceContainer.insertAdjacentHTML("afterbegin", balanceTemplate);
-
-            const fundsTemplate = `<span class="sum">${funds}</span>`;
-            fundsContainer.insertAdjacentHTML("afterbegin", fundsTemplate);
-
-            const paymentsTemplate = `<span class="sum">${payments}</span>`;
-            paymentsContainer.insertAdjacentHTML("afterbegin", paymentsTemplate);
+            balanceContainer.insertAdjacentHTML("afterbegin", balance);
+            fundsContainer.insertAdjacentHTML("afterbegin", funds);
+            paymentsContainer.insertAdjacentHTML("afterbegin", payments);
         })
     }
 

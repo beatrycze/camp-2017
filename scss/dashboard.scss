@@ -75,11 +75,10 @@ main {
 }
 
 .chart-container {
-    // display: flex;
-    // justify-content: space-around;
     background-color: $white;
     border-radius: 4px;
     margin: 20px 70px;
+    // override default c3 styles
         // .c3-area {
         //     stroke-width: 0;
         //     opacity: 1; 

@@ -58,17 +58,6 @@
             }
         }
     }
-    .transfer-recipient {
-        .select-box {
-            display: flex;
-            .book {
-                width: 26px;
-                height: 19px;
-                margin-top: 10px;
-                margin-left: 10px;
-            }
-        }
-    }
     .transfer-options {
         .tooltip-container {
             display: inline;
@@ -96,4 +85,8 @@
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.top-spacer {
+    margin-top: 10px;
 }

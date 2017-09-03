@@ -2,30 +2,87 @@
 
 .transfer-container {
     background-color: $white;
+    border-radius: 4px;
     padding: 20px;
+    .transfer-type {
+        .add-icon-bg {
+            width: 25px;
+            height: 25px;
+            border-radius: 4px;
+            background-color: $dark-grey;
+            .add-sign {
+                text-align: center;
+                a {
+                    color: $white;
+                }
+            }
+        }
+        .radio-container {
+            width: 100px;
+            .radio-icon-bg {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                background-color: $dark-grey;
+                .radio-icon {
+                    vertical-align: middle;
+                }
+                .arrow-position {
+                    position: relative;
+                    top: 15px;
+                    left: 32px;
+                    display: block;
+                }
+                .coins-position, .user-position {
+                    position: relative;
+                    bottom: 10px;
+                    right: 5px;
+                }
+                .dollar-position {
+                    position: relative;
+                    bottom: 10px;
+                }
+                .coin-position {
+                    position: relative;
+                    bottom: 5px;
+                }
+            }
+            .radio-label {
+                width: 60px;
+                margin-top: 8px;
+                text-align: center;
+            }
+            input:checked + div {
+                background-color: $blue;
+            }
+        }
+    }
+    .transfer-recipient {
+        .select-box {
+            display: flex;
+            .book {
+                width: 26px;
+                height: 19px;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .transfer-options {
+        .tooltip-container {
+            display: inline;
+            .question-sign {
+                vertical-align: super;
+            }
+        }
+    }
     .transfer-continue {
         text-transform: uppercase;
         background-color: $blue;
-        .type-add-icon {
-            width: 15px;
-            height: 15px;
-            background-color: $grey;
-        }
-    }
-    .radio-container {
-        width: 100px;
-        .radio-icon {
-            width: 60px;
-            height: 60px;
-            background-color: $grey;
-        }
-        .radio-label {
-            width: 60px;
-            text-align: center;
-        }
-        input:checked + div {
-            background-color: $blue;
-        }
+        border-radius: 3px;
+        width: 116px;
+        height: 38px;
     }
 }
 
@@ -35,4 +92,8 @@
 
 .inline {
     display: inline-block
+}
+
+.uppercase {
+    text-transform: uppercase;
 }

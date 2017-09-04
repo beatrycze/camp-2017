@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Transfer page</title>
+        <title>Transfer</title>
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link href="node_modules/c3/c3.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
@@ -85,181 +85,192 @@
             <div class="row">
                 <div class="small-12 columns">
                     <div class="transfer-container">
+                        <a href="#"><img src="img/icons/arrow-left.png" alt="" /></a>
                         <form>
-                            <!--custom select here-->
                             <div class="row">
                                 <div class="small-12 columns">
-                                <select name="select">
-                                    <!--<option value="value1"></option>-->
-                                </select>
-                                </div>
-                            </div>
-
-                            <div class="transfer-type">
-                                <div class="row">
-                                    <div class="small-2 columns">
-                                        <label for="type"><span>Type</span></label>
-                                    </div>
-                                    <div class="small-10 columns">
-                                        <div>
-                                            <div class="add-icon-bg inline right-spacer">
-                                                <p class="add-sign"><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></p>
-                                            </div>
-                                            <div class="inline">
-                                                <p>Add the account from which you draw funds</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="radio-container inline">
-                                                <label for="country">
-                                                    <input type="radio" id="country" name="type" value="" class="hide">
-                                                    <div class="radio-icon-bg">
-                                                        <img class="radio-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
-                                                        <img class="radio-icon coins-position" src="img/icons/coins.png" alt="" />
-                                                    </div>
-                                                    <div class="radio-label">
-                                                        <p>Country</p>
-                                                    </div>
-                                                </label>
-                                            </div>
-
-                                            <div class="radio-container inline">
-                                                <label for="own">
-                                                    <input type="radio" id="own" name="type" value="" class="hide">
-                                                    <div class="radio-icon-bg">
-                                                        <img class="radio-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
-                                                        <img class="radio-icon user-position" src="img/icons/user.png" alt="" />
-                                                    </div>
-                                                    <div class="radio-label">
-                                                        <p>Own</p>
-                                                    </div>
-                                                </label>
-                                            </div>
-
-                                            <div class="radio-container inline">
-                                                <label for="currencies">
-                                                    <input type="radio" id="currencies" name="type" value="" class="hide">
-                                                    <div class="radio-icon-bg">
-                                                        <img class="radio-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
-                                                        <img class="radio-icon dollar-position" src="img/icons/dollar.png" alt="" />
-                                                        <img class="radio-icon coin-position" src="img/icons/coin.png" alt="" />
-                                                    </div>
-                                                    <div class="radio-label">
-                                                        <p>Currencies</p>
-                                                    </div>
-                                                </label>
-                                            </div>
-
-                                            <div class="radio-container inline">
-                                                <label for="zus">
-                                                    <input type="radio" id="zus" name="type" value="" class="hide">
-                                                    <div class="radio-icon-bg">
-                                                        <img class="radio-icon" src="img/icons/zus.png" alt="" />
-                                                    </div>
-                                                    <div class="radio-label">
-                                                        <p class="uppercase">zus</p>
-                                                    </div>
-                                                </label>
-                                            </div>
-
-                                            <div class="radio-container inline">
-                                                <label for="tax">
-                                                    <input type="radio" id="tax" name="type" value="" class="hide">
-                                                    <div class="radio-icon-bg">
-                                                        <img class="radio-icon" src="img/icons/us.png" alt="" />
-                                                    </div>
-                                                    <div class="radio-label">
-                                                        <p class="uppercase">tax</p>
-                                                    </div>
-                                                </label>
-                                            </div>
-
-                                            <div class="radio-container inline">
-                                                <label for="gsm">
-                                                    <input type="radio" id="gsm" name="type" value="" class="hide">
-                                                    <div class="radio-icon-bg">
-                                                        <img class="radio-icon" src="img/icons/mobile.png" alt="" />
-                                                    </div>
-                                                    <div class="radio-label">
-                                                        <p class="uppercase">gsm</p>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
+                                    <!--custom select TODO-->
+                                    <div class="account-custom-select">
+                                        <!--<div>
+                                            <ul>
+                                                <li data-option="" data-value="current-account"><span>Current account</span></li>
+                                                <li data-option="" data-value="savings-account-1"><span>Savings account #1</span></li>
+                                                <li data-option="" data-value="savings-account-1"><span>Savings account #2</span></li>
+                                            </ul>
+                                        </div>-->
+                                        <select id="account-select" class="custom-arrow">
+                                            <option value="" disabled="" selected="">Choose the account</option>
+                                            <option value="current-account">Current account</option>
+                                            <option value="savings-account-1">Savings account #1</option>
+                                            <option value="savings-account-2">Savings account #2</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="transfer-recipient">
+                            <div class="row">
+                                <div class="small-12 large-10 large-offset-2 column">
+                                    <div class="add-icon-bg inline right-spacer">
+                                        <p class="add-sign"><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></p>
+                                    </div>
+                                    <div class="inline">
+                                        <p>Add the account from which you draw funds</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="type"><span>Type</span></label>
+                                </div>
+                                <div class="small-10 columns">
+                                    <div>
+                                        <div class="type-rb-container inline">
+                                            <label for="country">
+                                                <input type="radio" id="country" name="type" value="" class="hide">
+                                                <div class="type-icon-bg">
+                                                    <img class="radio-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
+                                                    <img class="radio-icon coins-position" src="img/icons/coins.png" alt="" />
+                                                </div>
+                                                <div class="type-label">
+                                                    <p>Country</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="type-rb-container inline">
+                                            <label for="own">
+                                                <input type="radio" id="own" name="type" value="" class="hide">
+                                                <div class="type-icon-bg">
+                                                    <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
+                                                    <img class="type-icon user-position" src="img/icons/user.png" alt="" />
+                                                </div>
+                                                <div class="type-label">
+                                                    <p>Own</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="type-rb-container inline">
+                                            <label for="currencies">
+                                                <input type="radio" id="currencies" name="type" value="" class="hide">
+                                                <div class="type-icon-bg">
+                                                    <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
+                                                    <img class="type-icon dollar-position" src="img/icons/dollar.png" alt="" />
+                                                    <img class="type-icon coin-position" src="img/icons/coin.png" alt="" />
+                                                </div>
+                                                <div class="type-label">
+                                                    <p>Currencies</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="type-rb-container inline">
+                                            <label for="zus">
+                                                <input type="radio" id="zus" name="type" value="" class="hide">
+                                                <div class="type-icon-bg">
+                                                    <img class="type-icon" src="img/icons/zus.png" alt="" />
+                                                </div>
+                                                <div class="type-label">
+                                                    <p class="uppercase">zus</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="type-rb-container inline">
+                                            <label for="tax">
+                                                <input type="radio" id="tax" name="type" value="" class="hide">
+                                                <div class="type-icon-bg">
+                                                    <img class="type-icon" src="img/icons/us.png" alt="" />
+                                                </div>
+                                                <div class="type-label">
+                                                    <p class="uppercase">tax</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="type-rb-container inline">
+                                            <label for="gsm">
+                                                <input type="radio" id="gsm" name="type" value="" class="hide">
+                                                <div class="type-icon-bg">
+                                                    <img class="type-icon" src="img/icons/mobile.png" alt="" />
+                                                </div>
+                                                <div class="type-label">
+                                                    <p class="uppercase">gsm</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
                                 <div class="row">
                                     <div class="small-2 columns">
                                         <label for="recipient"><span>Recipient</span></label>
                                     </div>
                                     <div class="small-8 columns">
-                                        <div class="select-box">
+                                        <div class="input-container">
                                             <input type="text" id="recipient" placeholder="Search for a recipient, contractor or customer" />
-                                            <img src="img/icons/recipients-book.png" class="book" alt="" />
+                                            <a href="#"><img src="img/icons/recipients-book.png" class="input-icon" alt="" /></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="transfer-where">
-                                <div class="row">
-                                    <div class="small-2 columns">
-                                        <label for="where"><span>Where</span></label>
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="where"><span>Where</span></label>
+                                </div>
+                                <div class="small-10 columns">
+                                    <div class="rb-container">
+                                        <label for="account">
+                                            <div class="rb-wrapper">
+                                                <input type="radio" id="account" name="where" value="" class="hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <span class="label-position">Account</span>
+                                        </label>
                                     </div>
-                                    <div class="small-10 columns">
-                                        <div class="radio-box">
-                                            <label for="account">
-                                                <div class="radio-wrapper">
-                                                    <input type="radio" id="account" name="where" value="" class="hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <span class="label-position">Account</span>
-                                            </label>
-                                        </div>
 
-                                        <div class="radio-box">
-                                            <label for="facebook">
-                                                <div class="radio-wrapper">
-                                                    <input type="radio" id="facebook" name="where" value="" class="hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <span class="label-position">Facebook</span>
-                                            </label>
-                                        </div>
+                                    <div class="rb-container">
+                                        <label for="facebook">
+                                            <div class="rb-wrapper">
+                                                <input type="radio" id="facebook" name="where" value="" class="hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <span class="label-position">Facebook</span>
+                                        </label>
+                                    </div>
 
-                                        <div class="radio-box">
-                                            <label for="phone">
-                                                <div class="radio-wrapper">
-                                                    <input type="radio" id="phone" name="where" value="" class="hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <span class="label-position">Phone</span>
-                                            </label>
-                                        </div>
+                                    <div class="rb-container">
+                                        <label for="phone">
+                                            <div class="rb-wrapper">
+                                                <input type="radio" id="phone" name="where" value="" class="hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <span class="label-position">Phone</span>
+                                        </label>
+                                    </div>
 
-                                        <div class="radio-box">
-                                            <label for="email">
-                                                <div class="radio-wrapper">
-                                                    <input type="radio" id="email" name="where" value="" class="hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <span class="label-position">Email</span>
-                                            </label>
-                                        </div>
+                                    <div class="rb-container">
+                                        <label for="email">
+                                            <div class="rb-wrapper">
+                                                <input type="radio" id="email" name="where" value="" class="hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <span class="label-position">Email</span>
+                                        </label>
+                                    </div>
 
-                                        <div class="radio-box">
-                                            <label for="by_phone">
-                                                <div class="radio-wrapper">
-                                                    <input type="radio" id="by_phone" name="where" value="" class="hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <span class="label-position">By phone</span>
-                                            </label>
-                                        </div>
+                                    <div class="rb-container">
+                                        <label for="by-phone">
+                                            <div class="rb-wrapper">
+                                                <input type="radio" id="by-phone" name="where" value="" class="hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <span class="label-position">By phone</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -273,28 +284,32 @@
                                 </div>
                             </div>
 
-                            <div class="transfer-sum">
-                                <div class="row">
-                                    <div class="small-2 columns">
-                                        <label for="sum"><span>Sum</span></label>
-                                    </div>
-                                    <div class="small-3 columns">
-                                        <input type="text" id="sum" placeholder="" />
-                                    </div>
-                                    <div class="small-2 columns">
-                                        <select name="select">
-                                            <!--<option value="value1"></option>-->
-                                        </select>
-                                    </div>
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="sum"><span>Sum</span></label>
+                                </div>
+                                <div class="small-3 columns">
+                                    <input type="text" id="sum" placeholder="" />
+                                </div>
+                                <div class="small-1 columns">
+                                    <select name="select" class="custom-arrow">
+                                        <option value="pln">PLN</option>
+                                        <option value="euro">EUR</option>
+                                        <option value="gbp">GPB</option>
+                                    </select>
                                 </div>
                             </div>
 
+                            <!--calendar TODO-->
                             <div class="row">
                                 <div class="small-2 columns">
                                     <label for="when"><span>When</span></label>
                                 </div>
                                 <div class="small-2 columns">
-                                    <input type="text" id="" placeholder="" />
+                                    <div class="input-container">
+                                        <input type="text" id="when" placeholder="" />
+                                        <a href="#"><img src="img/icons/calendar.png" class="input-icon" alt="" /></a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -303,65 +318,63 @@
                                     <label for="title"><span>Title</span></label>
                                 </div>
                                 <div class="small-8 columns">
-                                    <input type="text" id="" placeholder="" />
+                                    <input type="text" id="title" placeholder="" />
                                 </div>
                             </div>
 
-                            <div class="transfer-options">
-                                <div class="row">
-                                    <div class="small-2 columns">
-                                        <label for="where"><span>Type of transfer</span></label>
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="where"><span>Type of transfer</span></label>
+                                </div>
+                                <div class="small-10 columns">
+                                    <div class="rb-container">
+                                        <label for="normaly">
+                                            <div class="rb-wrapper top-spacer">
+                                                <input type="radio" id="normaly" name="option" value="" class="v-align hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <div class="label-position">
+                                                <span class="bold">Normaly</span>
+                                                <p>about 2 days</p>
+                                            </div>
+                                        </label>
                                     </div>
-                                    <div class="small-10 columns">
-                                        <div class="radio-box">
-                                            <label for="normaly">
-                                                <div class="radio-wrapper top-spacer">
-                                                    <input type="radio" id="normaly" name="option" value="" class="v-align hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <div class="label-position">
-                                                    <span class="bold">Normaly</span>
-                                                    <p>about 2 days</p>
-                                                </div>
-                                            </label>
-                                        </div>
 
-                                        <div class="radio-box">
-                                            <label for="express">
-                                                <div class="radio-wrapper top-spacer">
-                                                    <input type="radio" id="express" name="option" value="" class="v-align hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <div class="label-position">
-                                                    <span class="bold">Express Eliksir</span>
-                                                    <p>15 min</p>
-                                                </div>
-                                            </label>
-                                        </div>
+                                    <div class="rb-container">
+                                        <label for="express">
+                                            <div class="rb-wrapper top-spacer">
+                                                <input type="radio" id="express" name="option" value="" class="v-align hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <div class="label-position">
+                                                <span class="bold">Express Eliksir</span>
+                                                <p>15 min</p>
+                                            </div>
+                                        </label>
+                                    </div>
 
-                                        <div class="radio-box">
-                                            <label for="sorbnet">
-                                                <div class="radio-wrapper top-spacer">
-                                                    <input type="radio" id="sorbnet" name="option" value="" class="v-align hide">
-                                                    <div class="pseudo-radio"></div>
-                                                </div>
-                                                <div class="label-position">
-                                                    <span class="bold">Sorbnet</span>
-                                                    <p>2 hours</p>
-                                                </div>
-                                            </label>
-                                        </div>
+                                    <div class="rb-container">
+                                        <label for="sorbnet">
+                                            <div class="rb-wrapper top-spacer">
+                                                <input type="radio" id="sorbnet" name="option" value="" class="v-align hide">
+                                                <div class="pseudo-rb"></div>
+                                            </div>
+                                            <div class="label-position">
+                                                <span class="bold">Sorbnet</span>
+                                                <p>2 hours</p>
+                                            </div>
+                                        </label>
+                                    </div>
 
-                                        <div class="tooltip-container">
-                                            <a href="#"><img class="question-sign" src="img/icons/question-sign.png" alt="" /></a>
-                                        </div>
+                                    <div class="tooltip-container">
+                                        <a href="#"><img class="question-sign" src="img/icons/question-sign.png" alt="" /></a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="small-12 large-10 large-offset-2 column">
-                                    <a href="#" class="button transfer-continue">Continue <span class="show-for-sr">your transfer</span></a>
+                                    <a href="#" class="button continue">Continue <span class="show-for-sr">your transfer</span></a>
                                 </div>
                             </div>
                         </form>

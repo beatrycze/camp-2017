@@ -1,38 +1,111 @@
 @import 'colors';
 
 .transfer-container {
-    input[type="text"], select {
-        border-color: #e3e3e3;
-        box-shadow: 0 -2px 0px rgba(0, 0, 0, 0.22);
-    }
-    input#recipient {
+    input#recipient, input#when, select#account-select {
         border: 0px;
         box-shadow: 0px 0px 0px;
         height: auto;
         margin: 0px;
+    }
+
+    input#recipient, input#when, {
         padding-left: 0px;
     }
-    .transfer-recipient {
-        .select-box {
-            display: flex;
-            width: 100%;
-            height: 2.4375rem;
-            margin: 0 0 1rem;
-            padding: .5rem;
-            border: 1px solid #cacaca;
-            border-color: #e3e3e3;
-            box-shadow: 0 -2px 0px rgba(0,0,0,0.22);
-            .book {
-                width: 26px;
-                height: 19px;
-                margin-top: 3px;
+
+    input[type="text"], select, div.input-container {
+        border: 1px solid $grey;
+        box-shadow: 0 -2px 0px rgba(0, 0, 0, 0.22);
+    }
+
+    select.custom-arrow {
+        background: {
+            image: url('../img/icons/arrow-bottom.png');
+            size: auto;
+        }
+    }
+
+    .account-custom-select {
+        height: 50px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        box-shadow: 0px 0px 0px;
+        padding: 5px;
+        margin: 15px 0px 20px 0px;
+        // li {
+        //     list-style-type: none;
+        // }
+    }
+
+    .add-icon-bg {
+        width: 25px;
+        height: 25px;
+        border-radius: 4px;
+        background-color: $dark-grey;
+        .add-sign {
+            text-align: center;
+            a {
+                color: $white;
             }
         }
     }
-    .radio-box {
+
+    .type-rb-container {
+        width: 100px;
+        .type-icon-bg {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: $dark-grey;
+            .type-icon {
+                vertical-align: middle;
+            }
+            .arrow-position {
+                position: relative;
+                top: 15px;
+                left: 32px;
+                display: block;
+            }
+            .coins-position, .user-position {
+                position: relative;
+                bottom: 10px;
+                right: 5px;
+            }
+            .dollar-position {
+                position: relative;
+                bottom: 10px;
+            }
+            .coin-position {
+                position: relative;
+                bottom: 5px;
+            }
+        }
+        .type-label {
+            width: 60px;
+            margin-top: 8px;
+            text-align: center;
+        }
+        input:checked + div {
+            background-color: $blue;
+        }
+    }
+
+    .input-container {
+        display: flex;
+        width: 100%;
+        height: 2.4375rem;
+        margin: 0 0 1rem;
+        padding: .5rem;
+        .input-icon {
+            width: 26px;
+            height: 19px;
+        }
+    }
+
+    .rb-container {
         display: inline-block;
         margin: 0 60px 20px 0px;
-        .radio-wrapper {
+        .rb-wrapper {
             position: absolute;
             width: 30px;
             height: 30px;
@@ -41,7 +114,7 @@
             border: 1px solid $grey;
             border-radius: 50%;
             margin-right: 10px;
-            .pseudo-radio {
+            .pseudo-rb {
                 width: 13px;
                 height: 13px;
                 border-radius: 50%;
@@ -54,9 +127,24 @@
             position: relative;
             left: 40px;
         }
-        input:checked + div.pseudo-radio {
+        input:checked + div.pseudo-rb {
             background-color: $green;
             border: 1px solid $green;
         }
+    }
+
+    .tooltip-container {
+        display: inline;
+        .question-sign {
+            vertical-align: super;
+        }
+    }
+
+    .continue {
+        text-transform: uppercase;
+        background-color: $blue;
+        border-radius: 3px;
+        width: 116px;
+        height: 38px;
     }
 }

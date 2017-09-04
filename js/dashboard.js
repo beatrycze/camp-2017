@@ -37,9 +37,9 @@
 
                 return `
                     <ul class="products-list ${bankLoansStyle}">
-                        <li class="list-element-inline icon"><i class="${icon}" aria-hidden="true"></i></li>
-                        <li class="list-element-inline type">${productData.type}</li>
-                        <li class="list-element-inline amount">${productData.amount} ${productData.currency}</li>
+                        <li class="inline icon"><i class="${icon}" aria-hidden="true"></i></li>
+                        <li class="inline type">${productData.type}</li>
+                        <li class="inline amount">${productData.amount} ${productData.currency}</li>
                     </ul>
                 `
             };
@@ -61,9 +61,9 @@
                 let dataFormatted = historyData.date.slice(8) + "." + historyData.date.slice(5,7);
                 return `
                     <ul class="history-row">
-                        <li class="list-element-inline date">${dataFormatted}</li>
-                        <li class="list-element-inline description">${historyData.description}</li>
-                        <li class="list-element-inline amount"><span class="sum">${historyData.amount}</span> ${historyData.currency}</li>
+                        <li class="inline date">${dataFormatted}</li>
+                        <li class="inline description">${historyData.description}</li>
+                        <li class="inline amount"><span class="sum">${historyData.amount}</span> ${historyData.currency}</li>
                     </ul>
                 `
             }

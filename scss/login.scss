@@ -66,7 +66,7 @@
         color: $red;
         text-align: left;
     }
-    input[type="password"] {
+    input[type='password'] {
         width: 92%;
         display: inline-block;
     }
@@ -75,7 +75,7 @@
         top: 40px;
         left: 30%;
         width: 50%;
-        background-color: #ef0808;
+        background-color: $red;
         border-radius: 5px;
         padding: 7px;
         color: $white;
@@ -90,7 +90,7 @@
         height: 0;
         border-width: 10px;
         border-style: solid;
-        border-color: transparent transparent #ef0808 transparent;
+        border-color: transparent transparent $red transparent;
     }
     .action {
         text-transform: uppercase;
@@ -101,7 +101,7 @@
             color: $white;
             &.button {
                 background: $white;
-                color: #000000;
+                color: $black;
                 padding: 8px 50px;
                 border-radius: 5px;
                 margin-left: 20px;
@@ -145,8 +145,3 @@ nav > ul {
         }
     }
 }
-
-// a:focus {
-//     outline: 0;
-//     border: 2px solid #be0808;
-// }

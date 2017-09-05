@@ -127,7 +127,7 @@
                                     <div>
                                         <div class="type-rb-container inline">
                                             <label for="country">
-                                                <input type="radio" id="country" name="type" value="" class="hide">
+                                                <input type="radio" id="country" name="transfer-type" value="" class="hide">
                                                 <div class="type-icon-bg">
                                                     <img class="radio-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
                                                     <img class="radio-icon coins-position" src="img/icons/coins.png" alt="" />
@@ -140,7 +140,7 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="own">
-                                                <input type="radio" id="own" name="type" value="" class="hide">
+                                                <input type="radio" id="own" name="transfer-type" value="" class="hide">
                                                 <div class="type-icon-bg">
                                                     <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
                                                     <img class="type-icon user-position" src="img/icons/user.png" alt="" />
@@ -153,7 +153,7 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="currencies">
-                                                <input type="radio" id="currencies" name="type" value="" class="hide">
+                                                <input type="radio" id="currencies" name="transfer-type" value="" class="hide">
                                                 <div class="type-icon-bg">
                                                     <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
                                                     <img class="type-icon dollar-position" src="img/icons/dollar.png" alt="" />
@@ -167,7 +167,7 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="zus">
-                                                <input type="radio" id="zus" name="type" value="" class="hide">
+                                                <input type="radio" id="zus" name="transfer-type" value="" class="hide">
                                                 <div class="type-icon-bg">
                                                     <img class="type-icon" src="img/icons/zus.png" alt="" />
                                                 </div>
@@ -179,7 +179,7 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="tax">
-                                                <input type="radio" id="tax" name="type" value="" class="hide">
+                                                <input type="radio" id="tax" name="transfer-type" value="" class="hide">
                                                 <div class="type-icon-bg">
                                                     <img class="type-icon" src="img/icons/us.png" alt="" />
                                                 </div>
@@ -191,7 +191,7 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="gsm">
-                                                <input type="radio" id="gsm" name="type" value="" class="hide">
+                                                <input type="radio" id="gsm" name="transfer-type" value="" class="hide">
                                                 <div class="type-icon-bg">
                                                     <img class="type-icon" src="img/icons/mobile.png" alt="" />
                                                 </div>
@@ -210,7 +210,7 @@
                                         <label for="recipient"><span>Recipient</span></label>
                                     </div>
                                     <div class="small-8 columns">
-                                        <div class="input-container">
+                                        <div class="input-container custom-border">
                                             <input type="text" id="recipient" placeholder="Search for a recipient, contractor or customer" />
                                             <a href="#"><img src="img/icons/recipients-book.png" class="input-icon" alt="" /></a>
                                         </div>
@@ -225,8 +225,8 @@
                                 <div class="small-10 columns">
                                     <div class="rb-container">
                                         <label for="account">
-                                            <div class="rb-wrapper">
-                                                <input type="radio" id="account" name="where" value="" class="hide">
+                                            <div class="where-rb-wrapper">
+                                                <input type="radio" id="account" name="transfer-where" value="" class="hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Account</span>
@@ -235,8 +235,8 @@
 
                                     <div class="rb-container">
                                         <label for="facebook">
-                                            <div class="rb-wrapper">
-                                                <input type="radio" id="facebook" name="where" value="" class="hide">
+                                            <div class="where-rb-wrapper">
+                                                <input type="radio" id="facebook" name="transfer-where" value="" class="hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Facebook</span>
@@ -245,8 +245,8 @@
 
                                     <div class="rb-container">
                                         <label for="phone">
-                                            <div class="rb-wrapper">
-                                                <input type="radio" id="phone" name="where" value="" class="hide">
+                                            <div class="where-rb-wrapper">
+                                                <input type="radio" id="phone" name="transfer-where" value="" class="hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Phone</span>
@@ -255,8 +255,8 @@
 
                                     <div class="rb-container">
                                         <label for="email">
-                                            <div class="rb-wrapper">
-                                                <input type="radio" id="email" name="where" value="" class="hide">
+                                            <div class="where-rb-wrapper">
+                                                <input type="radio" id="email" name="transfer-where" value="" class="hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Email</span>
@@ -265,8 +265,8 @@
 
                                     <div class="rb-container">
                                         <label for="by-phone">
-                                            <div class="rb-wrapper">
-                                                <input type="radio" id="by-phone" name="where" value="" class="hide">
+                                            <div class="where-rb-wrapper">
+                                                <input type="radio" id="by-phone" name="transfer-where" value="" class="hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">By phone</span>
@@ -280,7 +280,7 @@
                                     <label for="number"><span>Number</span></label>
                                 </div>
                                 <div class="small-5 columns">
-                                    <input type="text" id="number" placeholder="" />
+                                    <input type="text" id="number" placeholder="" class="custom-border" />
                                 </div>
                             </div>
 
@@ -289,10 +289,11 @@
                                     <label for="sum"><span>Sum</span></label>
                                 </div>
                                 <div class="small-3 columns">
-                                    <input type="text" id="sum" placeholder="" />
+                                    <input type="text" id="sum" placeholder="" class="custom-border" />
                                 </div>
-                                <div class="small-1 columns">
-                                    <select name="select" class="custom-arrow">
+                                <div class="small-2 columns">
+                                    <select id="currency-select" class="custom-arrow custom-border">
+                                        <option value="" disabled="" selected="">Choose the currency</option>
                                         <option value="pln">PLN</option>
                                         <option value="euro">EUR</option>
                                         <option value="gbp">GPB</option>
@@ -306,7 +307,7 @@
                                     <label for="when"><span>When</span></label>
                                 </div>
                                 <div class="small-2 columns">
-                                    <div class="input-container">
+                                    <div class="input-container custom-border">
                                         <input type="text" id="when" placeholder="" />
                                         <a href="#"><img src="img/icons/calendar.png" class="input-icon" alt="" /></a>
                                     </div>
@@ -318,19 +319,19 @@
                                     <label for="title"><span>Title</span></label>
                                 </div>
                                 <div class="small-8 columns">
-                                    <input type="text" id="title" placeholder="" />
+                                    <input type="text" id="title" placeholder="" class="custom-border" />
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="small-2 columns">
-                                    <label for="where"><span>Type of transfer</span></label>
+                                    <label for="options"><span>Type of transfer</span></label>
                                 </div>
                                 <div class="small-10 columns">
                                     <div class="rb-container">
                                         <label for="normaly">
-                                            <div class="rb-wrapper top-spacer">
-                                                <input type="radio" id="normaly" name="option" value="" class="v-align hide">
+                                            <div class="option-rb-wrapper top-spacer">
+                                                <input type="radio" id="normaly" name="transfer-options" value="" class="v-align hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <div class="label-position">
@@ -342,8 +343,8 @@
 
                                     <div class="rb-container">
                                         <label for="express">
-                                            <div class="rb-wrapper top-spacer">
-                                                <input type="radio" id="express" name="option" value="" class="v-align hide">
+                                            <div class="option-rb-wrapper top-spacer">
+                                                <input type="radio" id="express" name="transfer-options" value="" class="v-align hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <div class="label-position">
@@ -355,8 +356,8 @@
 
                                     <div class="rb-container">
                                         <label for="sorbnet">
-                                            <div class="rb-wrapper top-spacer">
-                                                <input type="radio" id="sorbnet" name="option" value="" class="v-align hide">
+                                            <div class="option-rb-wrapper top-spacer">
+                                                <input type="radio" id="sorbnet" name="transfer-options" value="" class="v-align hide">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <div class="label-position">
@@ -389,5 +390,6 @@
         <script src="node_modules/d3/d3.min.js" charset="utf-8"></script>
         <script src="node_modules/c3/c3.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/transfer-form.js"></script>
     </body>
 </html>

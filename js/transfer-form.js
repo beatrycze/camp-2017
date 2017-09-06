@@ -23,6 +23,10 @@
         }
     };
 
+    const validateRadioButtonsOnClick = (rbList, fn) => {
+        rbList.forEach(element => element.addEventListener('click', fn))
+    };
+
     const accountNativeSelect = document.getElementById('account-select');
     const accountCustomSelect = document.querySelector('div.account-custom-select');
     function validateTransferAccount() {
@@ -84,17 +88,26 @@
         validateRadioButtons(transferTypeSelected, typeRbWrappersList, 'type-icon-bg-error');
     }
 
+    const transferTypeRbList = document.querySelectorAll('input[name=transfer-type]');
+    validateRadioButtonsOnClick(transferTypeRbList, validateTransferType);
+
     const whereRbWrappersList = document.querySelectorAll('div.where-rb-wrapper');
     function validateTransferWhere() {
         const transferWhereSelected = document.querySelector('input[name=transfer-where]:checked');
         validateRadioButtons(transferWhereSelected, whereRbWrappersList, 'rb-wrapper-error');
     }
 
+    const transferWhereRbList = document.querySelectorAll('input[name=transfer-where]');
+    validateRadioButtonsOnClick(transferWhereRbList, validateTransferWhere);
+
     const optionRbWrappersList = document.querySelectorAll('div.option-rb-wrapper');
     function validateTransferOption() {
         const transferOptionSelected = document.querySelector('input[name=transfer-options]:checked');
         validateRadioButtons(transferOptionSelected, optionRbWrappersList, 'rb-wrapper-error');
     }
+
+    const transferOptionsRbList = document.querySelectorAll('input[name=transfer-options]');
+    validateRadioButtonsOnClick(transferOptionsRbList, validateTransferOption);
 
     const validateTransferForm = function() {
         validateTransferAccount();        

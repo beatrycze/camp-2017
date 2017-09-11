@@ -144,10 +144,12 @@
 
     .continue {
         text-transform: uppercase;
+        color: $white;
         background-color: $blue;
         border-radius: 3px;
         width: 116px;
         height: 38px;
+        margin-bottom: 10px;
     }
 
     // validation errors styles

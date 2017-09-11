@@ -9,7 +9,7 @@
 
     const validate = (valid, selector, className) => {
         if (!valid) {
-            selector.classList.add(className)
+            selector.classList.add(className);
         } else {
             selector.classList.remove(className);
         }
@@ -24,7 +24,7 @@
     };
 
     const validateRadioButtonsOnClick = (rbList, fn) => {
-        rbList.forEach(element => element.addEventListener('click', fn))
+        rbList.forEach(element => element.addEventListener('click', fn));
     };
 
     const accountNativeSelect = document.getElementById('account-select');
@@ -122,6 +122,9 @@
         validateTransferOption();
     };
 
-    const continueBtn = document.querySelector('a.continue');
-    continueBtn.addEventListener('click', validateTransferForm);
+    const transferForm = document.getElementById('transfer');
+    transferForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        validateTransferForm();
+    });
 })();

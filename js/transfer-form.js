@@ -82,32 +82,49 @@
     }
     titleInput.addEventListener('blur', validateTransferTitle);
 
-    const typeRbWrappersList = document.querySelectorAll('div.type-icon-bg');
-    function validateTransferType() {
-        const transferTypeSelected = document.querySelector('input[name=transfer-type]:checked');
-        validateRadioButtons(transferTypeSelected, typeRbWrappersList, 'type-icon-bg-error');
+    function generateRbValidator(rbSelector, rbName) {
+        const rbWrappersList = document.querySelectorAll(rbSelector);
+        function validateRbs() {
+            const rbSelected = document.querySelector(`input[name=${rbName}]:checked`);
+            validateRadioButtons(rbSelected, rbWrappersList, 'rb-error');
+        }
+        const rbList = document.querySelectorAll(`input[name=${rbName}]`);
+        validateRadioButtonsOnClick(rbList, validateRbs);
+        return validateRbs;
     }
 
-    const transferTypeRbList = document.querySelectorAll('input[name=transfer-type]');
-    validateRadioButtonsOnClick(transferTypeRbList, validateTransferType);
+    // const rbSelector = 'div.type-icon-bg',
+    //     rbName = 'transfer-type';
+    // const rbWrappersList = document.querySelectorAll(rbSelector);
+    // function validateTransferType() {
+    //     const rbSelected = document.querySelector(`input[name=${rbName}]:checked`);
+    //     validateRadioButtons(rbSelected, rbWrappersList, 'rb-error');
+    // }
+    // const rbList = document.querySelectorAll(`input[name=${rbName}]`);
+    // validateRadioButtonsOnClick(rbList, validateTransferType);
+    const validateTransferType = generateRbValidator('div.type-icon-bg', 'transfer-type');
 
-    const whereRbWrappersList = document.querySelectorAll('div.where-rb-wrapper');
-    function validateTransferWhere() {
-        const transferWhereSelected = document.querySelector('input[name=transfer-where]:checked');
-        validateRadioButtons(transferWhereSelected, whereRbWrappersList, 'rb-wrapper-error');
-    }
+    // const rbSelector = 'div.where-rb-wrapper',
+    //     rbName = 'transfer-where';
+    // const rbWrappersList = document.querySelectorAll(rbSelector);
+    // function validateTransferWhere() {
+    //     const rbSelected = document.querySelector(`input[name=${rbName}]:checked`);
+    //     validateRadioButtons(rbSelected, rbWrappersList, 'rb-error');
+    // }
+    // const rbList = document.querySelectorAll(`input[name=${rbName}]`);
+    // validateRadioButtonsOnClick(rbList, validateTransferWhere);
+    const validateTransferWhere = generateRbValidator('div.where-rb-wrapper', 'transfer-where');
 
-    const transferWhereRbList = document.querySelectorAll('input[name=transfer-where]');
-    validateRadioButtonsOnClick(transferWhereRbList, validateTransferWhere);
-
-    const optionRbWrappersList = document.querySelectorAll('div.option-rb-wrapper');
-    function validateTransferOption() {
-        const transferOptionSelected = document.querySelector('input[name=transfer-options]:checked');
-        validateRadioButtons(transferOptionSelected, optionRbWrappersList, 'rb-wrapper-error');
-    }
-
-    const transferOptionsRbList = document.querySelectorAll('input[name=transfer-options]');
-    validateRadioButtonsOnClick(transferOptionsRbList, validateTransferOption);
+    // const rbSelector = 'div.option-rb-wrapper',
+    //     rbName = 'transfer-options';
+    // const rbWrappersList = document.querySelectorAll(rbSelector);
+    // function validateTransferOption() {
+    //     const rbSelected = document.querySelector(`input[name=${rbName}]:checked`);
+    //     validateRadioButtons(rbSelected, rbWrappersList, 'rb-error');
+    // }
+    // const rbList = document.querySelectorAll(`input[name=${rbName}]`);
+    // validateRadioButtonsOnClick(rbList, validateTransferOption);
+    const validateTransferOption = generateRbValidator('div.option-rb-wrapper', 'transfer-options');
 
     const validateTransferForm = function() {
         validateTransferAccount();        

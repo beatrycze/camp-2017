@@ -86,7 +86,7 @@
                 <div class="small-12 columns">
                     <div class="transfer-container">
                         <a href="#"><img src="img/icons/arrow-left.png" alt="" /></a>
-                        <form id="transfer" action="#">
+                        <form id="transfer" action="#" data-validate>
                             <div class="row">
                                 <div class="small-12 columns">
                                     <!--custom select TODO-->
@@ -98,7 +98,7 @@
                                                 <li data-option="" data-value="savings-account-1"><span>Savings account #2</span></li>
                                             </ul>
                                         </div>-->
-                                        <select id="account-select" class="custom-arrow">
+                                        <select id="account-select" class="custom-arrow" data-validate="notEmpty">
                                             <option value="" disabled="" selected="">Choose the account</option>
                                             <option value="current-account">Current account</option>
                                             <option value="savings-account-1">Savings account #1</option>
@@ -210,8 +210,8 @@
                                         <label for="recipient"><span>Recipient</span></label>
                                     </div>
                                     <div class="small-8 columns">
-                                        <div class="input-container custom-border">
-                                            <input type="text" id="recipient" placeholder="Search for a recipient, contractor or customer" />
+                                        <div class="recipient-input-container custom-border">
+                                            <input type="text" id="recipient" placeholder="Search for a recipient, contractor or customer" data-validate="notEmpty" />
                                             <a href="#"><img src="img/icons/recipients-book.png" class="input-icon" alt="" /></a>
                                         </div>
                                     </div>
@@ -280,7 +280,7 @@
                                     <label for="number"><span>Number</span></label>
                                 </div>
                                 <div class="small-5 columns">
-                                    <input type="text" id="number" placeholder="" class="custom-border" />
+                                    <input type="text" id="number" placeholder="" class="custom-border" data-validate="notEmpty accountFormat" />
                                 </div>
                             </div>
 
@@ -289,10 +289,10 @@
                                     <label for="sum"><span>Sum</span></label>
                                 </div>
                                 <div class="small-3 columns">
-                                    <input type="text" id="sum" placeholder="" class="custom-border" />
+                                    <input type="text" id="sum" placeholder="" class="custom-border" data-validate="notEmpty amountFormat" />
                                 </div>
                                 <div class="small-2 columns">
-                                    <select id="currency-select" class="custom-arrow custom-border">
+                                    <select id="currency-select" class="custom-arrow custom-border" data-validate="notEmpty">
                                         <option value="" disabled="" selected="">Choose the currency</option>
                                         <option value="pln">PLN</option>
                                         <option value="euro">EUR</option>
@@ -307,8 +307,8 @@
                                     <label for="when"><span>When</span></label>
                                 </div>
                                 <div class="small-2 columns">
-                                    <div class="input-container custom-border">
-                                        <input type="text" id="when" placeholder="" />
+                                    <div class="when-input-container custom-border">
+                                        <input type="text" id="when" placeholder="" data-validate="notEmpty dateFormat" />
                                         <a href="#"><img src="img/icons/calendar.png" class="input-icon" alt="" /></a>
                                     </div>
                                 </div>
@@ -319,7 +319,7 @@
                                     <label for="title"><span>Title</span></label>
                                 </div>
                                 <div class="small-8 columns">
-                                    <input type="text" id="title" placeholder="" class="custom-border" />
+                                    <input type="text" id="title" placeholder="" class="custom-border" data-validate="notEmpty" />
                                 </div>
                             </div>
 

@@ -1,7 +1,7 @@
 @import 'colors';
 
 .transfer-container {
-    input#recipient, input#when, select#account-select {
+    input#recipient, input#when, .account-custom-select {
         border: 0px;
         box-shadow: 0px 0px 0px;
         height: auto;
@@ -17,23 +17,19 @@
         box-shadow: 0 -2px 0px rgba(0, 0, 0, 0.22);
     }
 
+    .account {
+        height: 50px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 0px;
+        padding: 5px;
+        margin: 15px 0px 20px 0px;
+    }
+
     select.custom-arrow {
         background: {
             image: url('../img/icons/arrow-bottom.png');
             size: auto;
         }
-    }
-
-    .account-custom-select {
-        height: 50px;
-        border: 1px solid $grey;
-        border-radius: 5px;
-        box-shadow: 0px 0px 0px;
-        padding: 5px;
-        margin: 15px 0px 20px 0px;
-        // li {
-        //     list-style-type: none;
-        // }
     }
 
     .add-icon-bg {
@@ -50,7 +46,7 @@
     }
 
     .type-rb-container {
-        width: 100px;
+        margin-right: 40px;
         .type-icon-bg {
             width: 60px;
             height: 60px;
@@ -150,20 +146,13 @@
         width: 116px;
         height: 38px;
         margin-bottom: 10px;
+        &:hover, :focus {
+            background-color: $dark-blue;
+        }
     }
-
-    // validation errors styles
 
     .input-select-error {
-        border-color: $red;
-        box-shadow: 0 -2px 0px rgba(250, 4, 4, 0.22);
-    }
-
-    .custom-select-error {
-        border-color: $red;
-    }
-
-    .rb-error {
         border: 1px solid $red;
+        box-shadow: 0 -2px 0px rgba(250, 4, 4, 0.22);
     }
 }

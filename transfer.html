@@ -90,7 +90,7 @@
                             <div class="row">
                                 <div class="small-12 columns">
                                     <!--custom select TODO-->
-                                    <div class="account-custom-select">
+                                    <div class="custom-border account">
                                         <!--<div>
                                             <ul>
                                                 <li data-option="" data-value="current-account"><span>Current account</span></li>
@@ -98,7 +98,7 @@
                                                 <li data-option="" data-value="savings-account-1"><span>Savings account #2</span></li>
                                             </ul>
                                         </div>-->
-                                        <select id="account-select" class="custom-arrow" data-validate="notEmpty">
+                                        <select class="account-custom-select" class="custom-arrow" data-validate="notEmpty">
                                             <option value="" disabled="" selected="">Choose the account</option>
                                             <option value="current-account">Current account</option>
                                             <option value="savings-account-1">Savings account #1</option>
@@ -127,10 +127,12 @@
                                     <div>
                                         <div class="type-rb-container inline">
                                             <label for="country">
-                                                <input type="radio" id="country" name="transfer-type" value="" class="hide">
-                                                <div class="type-icon-bg">
-                                                    <img class="radio-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
-                                                    <img class="radio-icon coins-position" src="img/icons/coins.png" alt="" />
+                                                <div>
+                                                    <input type="radio" id="country" name="transfer-type" value="" class="hide" data-validate="rbChecked">
+                                                    <div class="type-icon-bg">
+                                                        <img class="radio-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
+                                                        <img class="radio-icon coins-position" src="img/icons/coins.png" alt="" />
+                                                    </div>
                                                 </div>
                                                 <div class="type-label">
                                                     <p>Country</p>
@@ -140,10 +142,12 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="own">
-                                                <input type="radio" id="own" name="transfer-type" value="" class="hide">
-                                                <div class="type-icon-bg">
-                                                    <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
-                                                    <img class="type-icon user-position" src="img/icons/user.png" alt="" />
+                                                <div>
+                                                    <input type="radio" id="own" name="transfer-type" value="" class="hide" data-validate="rbChecked">
+                                                    <div class="type-icon-bg">
+                                                        <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
+                                                        <img class="type-icon user-position" src="img/icons/user.png" alt="" />
+                                                    </div>
                                                 </div>
                                                 <div class="type-label">
                                                     <p>Own</p>
@@ -153,11 +157,13 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="currencies">
-                                                <input type="radio" id="currencies" name="transfer-type" value="" class="hide">
-                                                <div class="type-icon-bg">
-                                                    <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
-                                                    <img class="type-icon dollar-position" src="img/icons/dollar.png" alt="" />
-                                                    <img class="type-icon coin-position" src="img/icons/coin.png" alt="" />
+                                                <div>
+                                                    <input type="radio" id="currencies" name="transfer-type" value="" class="hide" data-validate="rbChecked">
+                                                    <div class="type-icon-bg">
+                                                        <img class="type-icon arrow-position" src="img/icons/arrow-right.png" alt="" />
+                                                        <img class="type-icon dollar-position" src="img/icons/dollar.png" alt="" />
+                                                        <img class="type-icon coin-position" src="img/icons/coin.png" alt="" />
+                                                    </div>
                                                 </div>
                                                 <div class="type-label">
                                                     <p>Currencies</p>
@@ -167,9 +173,11 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="zus">
-                                                <input type="radio" id="zus" name="transfer-type" value="" class="hide">
-                                                <div class="type-icon-bg">
-                                                    <img class="type-icon" src="img/icons/zus.png" alt="" />
+                                                <div>
+                                                    <input type="radio" id="zus" name="transfer-type" value="" class="hide" data-validate="rbChecked">
+                                                    <div class="type-icon-bg">
+                                                        <img class="type-icon" src="img/icons/zus.png" alt="" />
+                                                    </div>
                                                 </div>
                                                 <div class="type-label">
                                                     <p class="uppercase">zus</p>
@@ -179,9 +187,11 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="tax">
-                                                <input type="radio" id="tax" name="transfer-type" value="" class="hide">
-                                                <div class="type-icon-bg">
-                                                    <img class="type-icon" src="img/icons/us.png" alt="" />
+                                                <div>
+                                                    <input type="radio" id="tax" name="transfer-type" value="" class="hide" data-validate="rbChecked">
+                                                    <div class="type-icon-bg">
+                                                        <img class="type-icon" src="img/icons/us.png" alt="" />
+                                                    </div>
                                                 </div>
                                                 <div class="type-label">
                                                     <p class="uppercase">tax</p>
@@ -191,9 +201,11 @@
 
                                         <div class="type-rb-container inline">
                                             <label for="gsm">
-                                                <input type="radio" id="gsm" name="transfer-type" value="" class="hide">
-                                                <div class="type-icon-bg">
-                                                    <img class="type-icon" src="img/icons/mobile.png" alt="" />
+                                                <div>
+                                                    <input type="radio" id="gsm" name="transfer-type" value="" class="hide" data-validate="rbChecked">
+                                                    <div class="type-icon-bg">
+                                                        <img class="type-icon" src="img/icons/mobile.png" alt="" />
+                                                    </div>
                                                 </div>
                                                 <div class="type-label">
                                                     <p class="uppercase">gsm</p>
@@ -226,7 +238,7 @@
                                     <div class="rb-container">
                                         <label for="account">
                                             <div class="where-rb-wrapper">
-                                                <input type="radio" id="account" name="transfer-where" value="" class="hide">
+                                                <input type="radio" id="account" name="transfer-where" value="" class="hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Account</span>
@@ -236,7 +248,7 @@
                                     <div class="rb-container">
                                         <label for="facebook">
                                             <div class="where-rb-wrapper">
-                                                <input type="radio" id="facebook" name="transfer-where" value="" class="hide">
+                                                <input type="radio" id="facebook" name="transfer-where" value="" class="hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Facebook</span>
@@ -246,7 +258,7 @@
                                     <div class="rb-container">
                                         <label for="phone">
                                             <div class="where-rb-wrapper">
-                                                <input type="radio" id="phone" name="transfer-where" value="" class="hide">
+                                                <input type="radio" id="phone" name="transfer-where" value="" class="hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Phone</span>
@@ -256,7 +268,7 @@
                                     <div class="rb-container">
                                         <label for="email">
                                             <div class="where-rb-wrapper">
-                                                <input type="radio" id="email" name="transfer-where" value="" class="hide">
+                                                <input type="radio" id="email" name="transfer-where" value="" class="hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">Email</span>
@@ -266,7 +278,7 @@
                                     <div class="rb-container">
                                         <label for="by-phone">
                                             <div class="where-rb-wrapper">
-                                                <input type="radio" id="by-phone" name="transfer-where" value="" class="hide">
+                                                <input type="radio" id="by-phone" name="transfer-where" value="" class="hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <span class="label-position">By phone</span>
@@ -331,7 +343,7 @@
                                     <div class="rb-container">
                                         <label for="normaly">
                                             <div class="option-rb-wrapper top-spacer">
-                                                <input type="radio" id="normaly" name="transfer-options" value="" class="v-align hide">
+                                                <input type="radio" id="normaly" name="transfer-options" value="" class="v-align hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <div class="label-position">
@@ -344,7 +356,7 @@
                                     <div class="rb-container">
                                         <label for="express">
                                             <div class="option-rb-wrapper top-spacer">
-                                                <input type="radio" id="express" name="transfer-options" value="" class="v-align hide">
+                                                <input type="radio" id="express" name="transfer-options" value="" class="v-align hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <div class="label-position">
@@ -357,7 +369,7 @@
                                     <div class="rb-container">
                                         <label for="sorbnet">
                                             <div class="option-rb-wrapper top-spacer">
-                                                <input type="radio" id="sorbnet" name="transfer-options" value="" class="v-align hide">
+                                                <input type="radio" id="sorbnet" name="transfer-options" value="" class="v-align hide" data-validate="rbChecked">
                                                 <div class="pseudo-rb"></div>
                                             </div>
                                             <div class="label-position">
@@ -375,8 +387,8 @@
 
                             <div class="row">
                                 <div class="small-12 large-10 large-offset-2 column">
-                                    <button class="continue" type="submit">
-                                        Continue <span class="show-for-sr">your transfer</span>
+                                    <button class="button continue" type="submit">
+                                            Continue <span class="show-for-sr">your transfer</span>
                                     </button>
                                 </div>
                             </div>
